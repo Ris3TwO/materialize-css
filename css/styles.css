@@ -1,0 +1,248 @@
+/**
+ * Custom Properties
+ **/
+
+:root {
+    --main-font: 'Raleway';
+    --alternate-font: sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+    --main-color: rgb(217, 0, 98);
+    --main-modal-color: rgb(217, 0, 98, .75);
+    --second-color: rgb(20, 25, 45);
+    --second-modal-color: rgba(20, 25, 45, .75);
+    --alternate-color: rgb(80, 20, 100);
+    --alternate-modal-color: rgb(80, 20, 100, .75);
+    --action-color: rgb(84, 194, 141);
+    --action-modal-color: rgba(84, 194, 84, .75);
+    --bg-color: rgb(242, 244, 247);
+    --bg-modal-color: rgba(242, 244, 247, .75);
+    --bg-alternate-color: rgb(255, 255, 255);
+    --bg-alternate-modal-color: rgba(255, 255, 255, .75);
+    --border-color: #000;
+    --text-color: #515B6D;
+    --title-color: #333;
+    --link-color: #509EE3;
+    --link-hover-color: var(--main-color);
+    --max-width: 1200px;
+    --header-height: 5rem;
+    --logo-width: 4rem;
+    --logo-height: 4rem;
+    --logo-spacing: .5rem;
+    --nav-height: 64px;
+}
+
+
+/**
+ *  Reset Styles
+ **/
+
+html {
+    font-family: var(--main-font), var(--alternate-font);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: all .3s ease-out;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+
+/**
+ * Materialize Styles
+ **/
+
+nav,
+.navbar-fixed {
+    background-color: var(--second-color);
+    height: var(--nav-height);
+    line-height: var(--nav-height);
+}
+
+.brand-logo img {
+    padding: var(--logo-spacing);
+    max-height: var(--nav-height);
+}
+
+.button-collapse:hover {
+    color: var(--main-color);
+}
+
+.side-nav {
+    top: var(--nav-height);
+    background-color: var(--second-modal-color);
+}
+
+.side-nav li:hover {
+    background-color: var(--main-modal-color);
+    transition: all .3s ease;
+}
+
+.side-nav li>a,
+.desktop-nav {
+    color: var(--main-color);
+    font-size: 1.15rem;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.side-nav li>a>i {
+    color: var(--main-color);
+}
+
+.side-nav li>a:hover,
+.side-nav li>a:hover>i {
+    color: var(--bg-color);
+}
+
+.hide-on-med-and-down>li i {
+    display: inline-block;
+    font-size: 20px;
+    width: 22px;
+    text-align: left;
+}
+
+.hide-on-med-and-down>li i:hover {
+    color: var(--link-hover-color);
+}
+
+.green {
+    background-color: var(--action-color) !important;
+}
+
+.green-text {
+    color: var(--action-color) !important;
+}
+
+.container {
+    width: 90%;
+}
+
+.card .card-icon .icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-icon .icon i {
+    width: 100%;
+    font-size: 182px;
+    color: var(--bg-color);
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: var(--alternate-color);
+    text-transform: inherit;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+    color: var(--alternate-modal-color);
+}
+
+.services .card .card-content {
+    min-height: 170px;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.slider {
+    margin: auto;
+    max-width: 500px;
+    height: auto;
+}
+
+
+/**
+ * My Styles
+ **/
+
+.preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.welcome {
+    min-height: calc(100vh - var(--nav-height));
+    background-size: auto;
+    background-color: rgb(108, 130, 145);
+    background-image: linear-gradient(135deg, rgba(47, 145, 224, .91), rgba(7, 31, 51, .97) 79%);
+    background-image: linear-gradient(131deg, rgba(28, 118, 173, .92), rgba(83, 184, 152, 1));
+}
+
+.services .card-icon {
+    background-color: var(--alternate-color);
+}
+
+.services .info {
+    padding-bottom: 3rem;
+}
+
+.rotate-45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/**
+ * Media Queries Medium
+ **/
+
+@media only screen and (min-widht: 601px) {}
+
+
+/**
+ * Media Queries Large
+ **/
+
+@media only screen and (min-widht: 993px) {
+    .welcome-container,
+    .services .row {
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/**
+ * Media Queries ExtraLarge
+ **/
+
+@media only screen and (min-widht: 1201px) {
+    .container {
+        width: 90%;
+    }
+}
