@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    $('.scrollspy').scrollSpy({
+        scrollOffset: 70
+    });
+
     $(".button-collapse").sideNav();
 
     $('.preloader-background').delay(1700).fadeOut('slow');
@@ -12,6 +16,14 @@ $(document).ready(function() {
         indicators: true,
         duration: 1000
     });
+
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true
+    });
+
+    setInterval(() => {
+        $('.carousel.carousel-slider').carousel('next')
+    }, 5000);
 
     var anio = (new Date).getFullYear();
 

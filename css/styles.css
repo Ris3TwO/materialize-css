@@ -178,6 +178,39 @@ nav,
 }
 
 
+/* label color */
+
+.input-field label,
+.input-field .prefix.active {
+    color: var(--main-color) !important;
+}
+
+
+/* label focus color */
+
+.input-field input:focus+label,
+.input-field textarea:focus+label {
+    color: var(--main-color) !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid var(--main-color) !important;
+    box-shadow: 0 1px 0 0 var(--main-color) !important;
+}
+
+.input-field .btn {
+    background-color: var(--main-color);
+}
+
+.input-field .btn:hover {
+    background-color: var(--second-color);
+}
+
+
 /**
  * My Styles
  **/
@@ -186,7 +219,7 @@ nav,
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(3, 3, 3, 0.534);
+    background-color: #eee;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -238,6 +271,13 @@ nav,
     /* background-color: var(--alternate-color); */
 }
 
+.u-lg-flexCenter {
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .customers figure img {
     height: 500px;
     display: block;
@@ -247,6 +287,54 @@ nav,
 
 .workflow .container {
     width: 70%;
+}
+
+.workflow-description {
+    text-align: justify;
+}
+
+.workflow-steps sup {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.singlePage>.container {
+    display: block;
+    max-height: auto;
+    overflow: auto;
+}
+
+.singlePage,
+.multiPage {
+    background-image: url('../img/site-singlepage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.singlePage .container,
+.multiPage .container {
+    color: #000000;
+}
+
+.singlePage .row .valign-wrapper i,
+.multiPage .row .valign-wrapper i {
+    color: #008000;
+}
+
+.multiPage {
+    margin-top: -1.5rem;
+    background-image: url('../img/site-multipage.jpg');
+}
+
+.singlePage>.section,
+.multiPage>.section {
+    background-color: var(--bg-modal-color);
+    height: inherit;
+}
+
+.aboutInfo {
+    padding: 1rem;
+    background-color: var(--second-modal-color);
 }
 
 
