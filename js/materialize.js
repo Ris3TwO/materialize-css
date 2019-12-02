@@ -13,4 +13,7 @@ $(document).ready(function() {
         duration: 1000
     });
 
+    var anio = (new Date).getFullYear();
+
+    $(".footer small.copyright").html("Copyright &copy; " + anio + " IJJI Foundation | Todos los derechos reservados");
 });
